@@ -48,8 +48,8 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   form: {
-      marginTop: 50,
-      justifyContent: 'center',
+    marginTop: 50,
+    justifyContent: 'center',
   },
   noLogin: {
     marginTop: 30,

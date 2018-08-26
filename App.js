@@ -10,12 +10,12 @@ import Calculadora from './components/Calculadora';
 
 
 const App = createStackNavigator({
+ Calculadora: { screen: Calculadora},
  Login: { screen: Login },
  Portifolio: { screen: Portifolio },
  Produto: { screen: Produto },
  Food: {screen: Food},
  Ingrediente: { screen: Ingrediente},
- Calculadora: { screen: Calculadora}
 }, {
  headerMode: 'none'
 })

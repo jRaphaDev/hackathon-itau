@@ -10,8 +10,7 @@ export default class Portifolio extends React.Component {
 
        const {goBack, navigate} = this.props.navigation;
 
-       const nextPage =
-       () => {
+       const nextPage = () => {
          navigate('Food');
        }
 

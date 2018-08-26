@@ -20,17 +20,13 @@ export default class Food extends React.Component {
 
        return (
            <Container>
-               <Header searchBar rounded styles={styles.noGeral}>
-                   <Item>
-                       <Icon name="ios-search" />
-                       <Input placeholder="Procurar" />
-                   </Item>
-                   <Button transparent>
-                       <Text>Search</Text>
-                   </Button>
-
-
-               </Header>
+               <Header styles={styles.noGeral}>
+                <Left>
+                    <Button transparent onPress={backPage}>
+                        <Icon name='arrow-back' />
+                    </Button>
+                </Left>
+              </Header>
 
                <Content hasTabs styles={styles.noGeral}>
                    <Tabs>
