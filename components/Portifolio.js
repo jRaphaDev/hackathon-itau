@@ -8,7 +8,7 @@ export default class Portifolio extends React.Component {
 
     render() {
 
-        const {goBack} = this.props.navigation;
+        const {goBack, navigate} = this.props.navigation;
 
         return (
             <Container>
@@ -27,7 +27,7 @@ export default class Portifolio extends React.Component {
                     <View style={styles.row}>
 
                         <Card style={styles.card}>
-                            <CardItem button onPress={() => Alert.alert('here')} >
+                            <CardItem button onPress={() => navigate('Produto')} >
                                 <Body>
                                     <Image 
                                         style={{width: 180, height: 180, alignContent: "center", alignSelf: "center"}}
