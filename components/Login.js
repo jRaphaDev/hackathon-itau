@@ -1,10 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Container, Header, Content, Item, Input } from 'native-base';
+
 
 export default class App extends React.Component {
 
   render() {
-
     const { navigate } = this.props.navigation;
 
     const login = () => {
@@ -12,17 +13,17 @@ export default class App extends React.Component {
     }
 
     return (
-      <View style={styles.container}>
-        <TextInput
-          style={{height: 120}}
-          placeholder='Login'
-        />
-
-        <TouchableOpacity style={styles.button} onPress={login}>
-          <Text style={styles.textButton}>Login</Text>
-        </TouchableOpacity>
-
-      </View>
+        <Container style={styles.container}>
+            <Header />
+            <Content>
+                <Item rounded>
+                    <Input placeholder='Login'/>
+                </Item>
+                <TouchableOpacity style={styles.button} onPress={login}>
+                    <Text style={styles.textButton}>Login</Text>
+                </TouchableOpacity>
+            </Content>
+        </Container>
     );
   }
 }
