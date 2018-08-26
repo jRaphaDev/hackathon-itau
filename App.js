@@ -6,6 +6,8 @@ import Login from './components/Login';
 const App = createStackNavigator({
   Login: { screen: Login },
   Portifolio: { screen: Portifolio },
+}, {
+  headerMode: 'none'
 })
 
 export default App;

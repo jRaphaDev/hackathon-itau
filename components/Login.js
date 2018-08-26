@@ -13,38 +13,30 @@ export default class App extends React.Component {
     }
 
     return (
-        <Container style={styles.container}>
+        <Container>
             <Content>
-
-                
-
                 <Form style={styles.form}>
                     <View>
                         <Image 
-                            style={{width: 120, height: 120, alignContent: "center", alignSelf: "center"}}
+                            style={{width: 180, height: 180, alignContent: "center", alignSelf: "center"}}
                             source={require('../imgs/logo.png')} />
                     </View>
 
                     <Item floatingLabel>
                         <Label>Username</Label>
                         <Input />
-                    </Item>logo-precorando
+                    </Item>
                     
                     <Item floatingLabel>
                         <Label>Password</Label>
                         <Input secureTextEntry={true} />
                     </Item>
-                    
-                    <View style={styles.row}>
 
-                        <TouchableOpacity style={styles.button} onPress={login}>
-                            <Text style={styles.textButton}>Login</Text>
-                        </TouchableOpacity>
+                    <TouchableOpacity style={styles.button} onPress={login}>
+                        <Text style={styles.textButton}>FAZER LOGIN</Text>
+                    </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.button} onPress={login}>
-                            <Text style={styles.textButton}>Cadastre-se</Text>
-                        </TouchableOpacity>
-                    </View>
+                    <Text style={styles.noLogin}>Não tenho conta.</Text>
 
                 </Form>
                 
@@ -55,31 +47,29 @@ export default class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-  },
   form: {
-      marginTop: 100,
+      marginTop: 50,
       justifyContent: 'center',
   },
-  row: {
-    flexDirection: "row"
+  noLogin: {
+    marginTop: 30,
+    textAlign: 'center',
+    color: '#9b9b9b'
   },
   input: {
     flex: 1,
     width: 100
   },
   button: {
-    backgroundColor: '#1da6cf',
+    flex: 1,
+    backgroundColor: '#FFB100',
     marginTop: 20,
     paddingVertical: 10,
     paddingHorizontal: 40,
-    borderColor: '#1da6cf',
+    borderColor: '#FFB100',
     borderWidth: 1,
-    borderRadius: 8,
-    marginLeft: 10,
+    borderRadius: 30,
+    marginHorizontal: 22,
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.4,
