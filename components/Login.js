@@ -39,7 +39,7 @@ export default class App extends React.Component {
                     <Text style={styles.noLogin}>Não tenho conta.</Text>
 
                 </Form>
-                
+
             </Content>
         </Container>
     );

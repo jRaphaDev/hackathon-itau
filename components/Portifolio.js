@@ -6,86 +6,91 @@ import { Container, Content, Header, Card, CardItem, Body, View, Title , Left, I
 
 export default class Portifolio extends React.Component {
 
-    render() {
+   render() {
 
-        const {goBack, navigate} = this.props.navigation;
+       const {goBack, navigate} = this.props.navigation;
 
-        return (
-            <Container>
-                <Header>
-                    <Left>
-                        <Button transparent onPress={() => goBack()}>
-                            <Icon name='arrow-back' />
-                        </Button>
-                    </Left>
-                    <Body>
-                        <Title>Portifolio</Title>
-                    </Body>
-                    <Right />
-                </Header>
-                <Content>
-                    <View style={styles.row}>
+       const nextPage =
+       () => {
+         navigate('Food');
+       }
 
-                        <Card style={styles.card}>
-                            <CardItem button onPress={() => navigate('Produto')} >
-                                <Body>
-                                    <Image 
-                                        style={{width: 180, height: 180, alignContent: "center", alignSelf: "center"}}
-                                        source={require('../imgs/logo.png')} />
-                                </Body>
-                            </CardItem>
-                        </Card>
+       return (
+           <Container>
+               <Header>
+                   <Left>
+                       <Button transparent onPress={nextPage}>
+                           <Icon name='arrow-back' />
+                       </Button>
+                   </Left>
+                   <Body>
+                       <Title>Portifolio</Title>
+                   </Body>
+                   <Right />
+               </Header>
+               <Content>
+                   <View style={styles.row}>
 
-                        <Card style={styles.card}>
-                            <CardItem button onPress={() => Alert.alert('here')} >
-                                <Body>
-                                    <Image
-                                        style={{width: 180, height: 180, alignContent: "center", alignSelf: "center"}}
-                                        source={require('../imgs/logo.png')} />
-                                </Body>
-                            </CardItem>
-                        </Card>
-                    </View>
-                    <View style={styles.row}>
-                        <Card style={styles.card}>
-                            <CardItem button onPress={() => Alert.alert('here')} >
-                                <Body>
-                                    <Image
-                                        style={{width: 180, height: 180, alignContent: "center", alignSelf: "center"}}
-                                        source={require('../imgs/logo.png')} />
-                                </Body>
-                            </CardItem>
-                        </Card>
+                       <Card style={styles.card}>
+                           <CardItem button onPress={nextPage} >
+                               <Body>
+                                   <Image
+                                       style={{width: 180, height: 180, alignContent: "center", alignSelf: "center"}}
+                                       source={require('../imgs/logo.png')} />
+                               </Body>
+                           </CardItem>
+                       </Card>
 
-                        <Card style={styles.card}>
-                            <CardItem button onPress={() => Alert.alert('here')} >
-                                <Body>
-                                    <Image 
-                                        style={{width: 180, height: 180, alignContent: "center", alignSelf: "center"}}
-                                        source={require('../imgs/logo.png')} />
-                                </Body>
-                            </CardItem>
-                        </Card>
-                    </View>
+                       <Card style={styles.card}>
+                           <CardItem button onPress={nextPage} >
+                               <Body>
+                                   <Image
+                                       style={{width: 180, height: 180, alignContent: "center", alignSelf: "center"}}
+                                       source={require('../imgs/logo.png')} />
+                               </Body>
+                           </CardItem>
+                       </Card>
+                   </View>
+                   <View style={styles.row}>
+                       <Card style={styles.card}>
+                           <CardItem button onPress={nextPage} >
+                               <Body>
+                                   <Image
+                                       style={{width: 180, height: 180, alignContent: "center", alignSelf: "center"}}
+                                       source={require('../imgs/logo.png')} />
+                               </Body>
+                           </CardItem>
+                       </Card>
 
-                </Content>
-            </Container>
-        );
-    }
+                       <Card style={styles.card}>
+                           <CardItem button onPress={nextPage} >
+                               <Body>
+                                   <Image
+                                       style={{width: 180, height: 180, alignContent: "center", alignSelf: "center"}}
+                                       source={require('../imgs/logo.png')} />
+                               </Body>
+                           </CardItem>
+                       </Card>
+                   </View>
+
+               </Content>
+           </Container>
+       );
+   }
 }
 
 
 const styles = StyleSheet.create({
-    row: {
-        flex: 1,
-        flexDirection: 'row'
-    },
-    card: {
-        width:155,
-        height:155,
-        marginTop: 25,
-        marginLeft: 20,
-        borderWidth: 1,
-        borderRadius: 4,
-    }
+   row: {
+       flex: 1,
+       flexDirection: 'row'
+   },
+   card: {
+       width:155,
+       height:155,
+       marginTop: 25,
+       marginLeft: 20,
+       borderWidth: 1,
+       borderRadius: 4,
+   }
 });

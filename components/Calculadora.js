@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Image, Dimensions } from 'react-native';
-import { Container, Header, Content, Form, Item, Input, Label, Footer, Button, Icon, Title } from 'native-base';
+import { StyleSheet, Text, TouchableOpacity, Image, Dimensions } from 'react-native';
+import { Container, Content, Form, Item, Input, Label } from 'native-base';
 
 const {width, height} = Dimensions.get('window');
 
@@ -18,21 +18,8 @@ export default class Produto extends React.Component {
             <Content>
                 <Form style={styles.form}>
 
-                    <Text style={styles.productText}>Não tenho conta.</Text>
+                    <Text style={styles.productText}>Calc</Text>
 
-                    <Item floatingLabel>
-                        <Label>Xícaras(s) de Farinha de Trigo</Label>
-                        <Input keyboardType="number-pad"/>
-                    </Item>
-
-                    <Item floatingLabel>
-                        <Label>Valor do Kg</Label>
-                        <Input />
-                    </Item>
-
-                    <TouchableOpacity style={styles.button} onPress={nextPage}>
-                        <Text style={styles.textButton} >Adicionar</Text>
-                    </TouchableOpacity>
                 </Form>
 
             </Content>
